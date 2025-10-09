@@ -1,7 +1,6 @@
 package com.example.dao;
 
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 /*
@@ -19,13 +18,14 @@ public class DaoImpl2 implements IDao {
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-@Primary
-@Component("dao2")
+@Component("daoFile")
 @Profile("dev")  // Ce bean sera actif uniquement avec le profil "dev"
-public class DaoImpl2 implements IDao {
+public class DaoFile implements IDao {
     @Override
     public double getValue() {
         System.out.println("Version de développement");
-        return 150.0;
+        return 180.0;
     }
 }
+
+
